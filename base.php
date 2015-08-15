@@ -20,20 +20,24 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap container" role="document">
       <div class="content row">
-        <main class="main" role="main">
-          <?php include Wrapper\template_path(); ?>
+        <main class="main curvy-border" role="main">
+          <div class="inner-fix">
+            <?php include Wrapper\template_path(); ?>
+          </div>
         </main><!-- /.main -->
         <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
+          <aside class="sidebar curvy-border" role="complementary">
+            <div class="inner-fix">
+              <?php include Wrapper\sidebar_path(); ?>
+            </div>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
       </div><!-- /.content -->
-    </div><!-- /.wrap -->
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
       wp_footer();
     ?>
+    </div><!-- /.wrap -->
   </body>
 </html>

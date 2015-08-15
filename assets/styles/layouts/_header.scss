@@ -1,0 +1,71 @@
+// Brand & Header
+.brand {
+  text-decoration: none;
+  color: #fff;
+  font-size: 77px;
+  line-height: 134px;
+}
+.brand:hover {
+  color: #7f3f98;
+  text-decoration: none;
+}
+header {
+  font-family: 'ExistenceDayRegular';
+  .container {
+    position: relative;
+  }
+}
+
+// main nav bar
+.nav>li>a {
+  padding-top:0px; // override bootstrap default
+}
+.nav {
+  float:left;
+  clear:none;
+  padding-left:0px;
+  margin-bottom: 10px;
+  a {
+    color: white;
+  }
+  li:first-child a {
+    padding-left:0px;
+  }
+  li {
+    float: left;
+    clear: none;
+    a:link, a:visited, a:active {
+      font-size: 28px;
+      text-decoration: none;
+      margin:0;
+      background: none;
+    }
+    a:hover, a:focus {
+      text-decoration:none;
+    }
+  }
+}
+
+//different colors for each nav item on hover:
+.nav li.menu-item-198 a:hover,.nav li.menu-item-198 a:active { color:#ED1C24 }
+.nav li.menu-item-199 a:hover,.nav li.menu-item-199 a:active { color:#F26522 }
+.nav li.menu-item-200 a:hover,.nav li.menu-item-200 a:active { color:#FFDE17 }
+.nav li.menu-item-201 a:hover,.nav li.menu-item-201 a:active { color:#00A14B }
+.nav li.menu-item-203 a:hover,.nav li.menu-item-203 a:active { color:#21409A }
+
+// tree dude in top right
+.happyTree {
+  position: absolute;
+  top: 0;
+  right: 126px;
+  clear:none;
+  margin:0 0 -10px 0 ;
+  padding:24px 38px 0 129px;
+  text-align:center;
+  width:214px;
+  height:170px;
+  background:transparent url(/wp-content/themes/xd2/assets/images/happytree.png) top left no-repeat;
+  font-size:25px;
+  line-height:1.2em;
+  z-index:10;
+}

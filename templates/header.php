@@ -8,5 +8,6 @@
       endif;
       ?>
     </nav>
+    <div class="happyTree">April 21st!</div>  
   </div>
 </header>
