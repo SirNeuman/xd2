@@ -5,8 +5,17 @@
   margin-left: 2%;
   width: 31.33333%;
 }
-.widget_categories a {
-  font-family: ExistenceDayRegular;
-  font-size: 24px;
-  text-decoration: none;
+.widget_categories ul {
+  padding-left:13px;
+  li {
+    list-style: none;
+    a {
+      font-family: ExistenceDayRegular;
+      font-size: 24px;
+      text-decoration: none;
+    }
+  }
+}
+.sidebar h3 {
+  font-size: 28px;
 }

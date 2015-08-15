@@ -11,7 +11,7 @@
 }
 
 body {
-    background: #b1dbec url(#{$asset-path}/images/bgBodyLight.png) top left repeat-x;
+    background: url(#{$asset-path}/images/bgBodyLight.png) top left repeat-x;
     font: 14px/1.6em Verdana, sans-serif;
     color: #333;
 }
@@ -21,6 +21,10 @@ h1,h2,h3,h4,h5,h6 {
   color: #21409A;
 }
 
+h2 {
+    margin: 1.5em 0 24px 0;
+    line-height: 1.2em;
+}
 
 // curvy borders
 .main.curvy-border, .sidebar-primary .main.curvy-border { 
