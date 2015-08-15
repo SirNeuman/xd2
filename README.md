@@ -1,1 +1,1 @@
-A Wordpress theme for Existence Day
+A Wordpress theme for Existence Day.
