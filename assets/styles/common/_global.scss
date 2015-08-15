@@ -11,7 +11,7 @@
 }
 
 body {
-    background: url(#{$asset-path}/images/bgBodyLight.png) top left repeat-x;
+    background:#b1dbec url(#{$asset-path}/images/bgBodyLight.png) top left repeat-x;
     font: 14px/1.6em Verdana, sans-serif;
     color: #333;
 }
