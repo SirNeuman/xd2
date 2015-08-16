@@ -9,7 +9,7 @@
       ?>
     </nav>
     <div class="happyTree">April 21st!</div>  
-    <div id="menu-toggle" class="veggieburger">
+    <div id="menu-toggle" class="veggieburger visible-xs">
       <span></span>
       <span></span>
       <span></span>
