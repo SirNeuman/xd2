@@ -2,8 +2,6 @@
 .sidebar.curvy-border { 
   padding-left:0;
   padding-right:0;
-  margin-left: 2%;
-  width: 31.33333%;
 }
 .widget_categories ul {
   padding-left:13px;
@@ -18,4 +16,27 @@
 }
 .sidebar h3 {
   font-size: 28px;
+}
+
+// Breakpoints
+@media (max-width: $screen-xs-max) { 
+
+}
+@media (min-width: $screen-sm-min) { 
+  .sidebar.curvy-border { 
+    margin-left: 2%;
+    width: 31.33333%;
+  }
+}
+@media (max-width: $screen-sm-max) { 
+
+}
+@media (min-width: $screen-md-min) { 
+
+}
+@media (max-width: $screen-md-max) { 
+
+}
+@media (min-width: $screen-lg-min) { 
+
 }

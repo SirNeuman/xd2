@@ -2,8 +2,7 @@
 .brand {
   text-decoration: none;
   color: #fff;
-  font-size: 77px;
-  line-height: 134px;
+  font-size: 36px;
 }
 .brand:hover {
   color: #7f3f98;
@@ -76,6 +75,12 @@ header {
     line-height:1.2em;
     z-index:10;
     background-size: 100% 100%;
+  }
+  .brand {
+    text-decoration: none;
+    color: #fff;
+    font-size: 77px;
+    line-height: 134px;
   }
 }
 @media (min-width: $screen-md-min) { 

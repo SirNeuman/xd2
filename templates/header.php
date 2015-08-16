@@ -9,5 +9,11 @@
       ?>
     </nav>
     <div class="happyTree">April 21st!</div>  
+    <div id="menu-toggle" class="veggieburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </div>
 </header>
