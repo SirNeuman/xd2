@@ -9,6 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
+$font-family-brand: 'ExistenceDayRegular';
 
 body {
     background:#b1dbec url(#{$asset-path}/images/bgBodyLight.png) top left repeat-x;
@@ -17,7 +18,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'ExistenceDayRegular';
+  font-family: $font-family-brand;
   color: #21409A;
 }
 
@@ -28,7 +29,6 @@ h2 {
 h2.entry-title {
   margin-bottom:0;
 }
-
 
 article.format-quote {
   margin-bottom: 100px;
@@ -106,6 +106,65 @@ article.format-quote {
     height: 100%;
   }
 }
+
+.xd-alert {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: auto;
+  padding:20px;
+  font-family: $font-family-brand;
+  font-size: 18px;
+}
+
+a[ng-click]{
+    cursor: pointer;
+}
+
+.vote-menu {
+  position: absolute;
+  ul {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    li {
+      display: inline;
+      a.vote {
+        display: block;
+        float: left;
+        clear: none;
+        width: 29px;
+        height: 47px;
+        background:transparent url(#{$asset-path}/images/vote-sprite.png) top left no-repeat;
+        text-indent: -9999px;  
+      }
+      a.vote.up {
+        margin-right: 5px;
+        background-position: 0 -47px;
+      }
+      a.vote.up:hover {
+        background-position: 0 0;
+      }
+      a.vote.down {
+        background-position: -29px -47px;
+      }
+      a.vote.down:hover {
+        background-position: -29px 0;
+      }
+    }
+  }
+}
+.idea, .vote-menu {
+  // preventing double click selection:
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
 
 // Breakpoints
 @media (max-width: $screen-xs-max) { 

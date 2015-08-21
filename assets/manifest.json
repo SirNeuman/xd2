@@ -25,7 +25,7 @@
     },
     "app.js": {
       "files": ["scripts/app/app.js"],
-      "vendor": ["app/app.js"]
+      "main": true
     }  
   },
   "config": {

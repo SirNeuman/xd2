@@ -12,16 +12,16 @@
         <div class="col-sm-12">
           <label class="sr-only" for="newIdea">Idea</label>
           <div class="form-group">
-            <input type="text" class="form-control" ng-model="newIdea" name="newIdea"  id="newIdea" placeholder="your idea" />
+            <input type="text" class="form-control" ng-model="newIdea" name="newIdea" id="newIdea" placeholder="your idea" />
           </div>
           <button class="btn btn-default">List It</button>
         </div>
       </div>
     </form>
     <ul>
-      <li ng-repeat="idea in ideas">
-        <a href="#" class="idea" data-create-date="{{idea.createDate}}" data-count="{{idea.count}}" data-id="{{idea.id}}">
-          {{idea.idea}}
+      <li ng-repeat="idea in ideas | filter:newIdea | orderBy: 'createDate':true">
+        <a ng-click="showVoteMenu($event,idea.id)" data-count="{{idea.count}}" class="idea">
+          {{idea.idea}} ({{idea.count}})
         </a>
       </li>
     </ul>
