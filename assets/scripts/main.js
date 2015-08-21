@@ -11,7 +11,7 @@
  * ======================================================================== */
 
 // set app plugin defaults
-alertify.set({ delay: 1500 });
+alertify.set({ delay: 2000 });
 
 (function($) {
 
@@ -42,8 +42,6 @@ alertify.set({ delay: 1500 });
     // Idea cloud page, note the change from idea-cloud to idea_cloud
     'idea_cloud': {
       init: function() {
-        // prevent text selection on double click
-        $('.vote-menu').mousedown(function(e){ e.preventDefault(); });
         // //hide menu on outside click
         $(document).on('mouseup',function (event) {
           var container = $('.vote-menu');

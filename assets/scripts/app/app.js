@@ -1,5 +1,6 @@
 var ideaCloud = angular.module('ideaCloud', ['ngResource']);
 
+  // Setup API as resource
   ideaCloud.factory('Ideas', function($resource) {
     var data = $resource('http://104.131.8.61/api/v1/ideas', {
       id: '@id', 
@@ -21,8 +22,8 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
       }
     });
     return data;
-    
   });
+
 
   ideaCloud.controller('IdeaCloudController', function($scope, Ideas, $compile) {
 
@@ -30,12 +31,31 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
     var getIdeasQuery = Ideas.query(function(data) {
       $scope.ideas = data;
     });
-    getIdeasQuery.$promise.then(function(){
-      // loaded!
+    getIdeasQuery.$promise.then(function(data){
+      // Default font sizes
+      $scope.ideas = data;
+      $scope.setFontSize();
+      angular.element('#idea-cloud ul').show();
     }).catch(function(){
       // uh oh
     });
 
+    $scope.setFontSize = function() {
+      var minFontsize = 18; 
+      var maxFontsize = 84;
+      var countArray = [];
+      angular.forEach($scope.ideas, function (idea) {
+        countArray.push(idea.count);
+      });
+      var minimumCount = Math.min.apply(Math,countArray);
+      var maximumCount = Math.max.apply(Math,countArray);
+      var spread = maximumCount - minimumCount;
+      angular.forEach($scope.ideas, function (idea, key) {
+        var adjustedSize = (minFontsize + (idea.count - minimumCount) * (maxFontsize - minFontsize) / spread);
+        $scope.ideas[key].fontSize = adjustedSize;
+      });
+    };
+    
     $scope.showVoteMenu = function(event, id) {
       //set mouse click coords
       var x = event.pageX - 15, // offset for little tree guy
@@ -48,7 +68,6 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
       '</ul></div>')($scope));
     };
 
-
     //add idea through the form
     $scope.addIdea = function() {
       //if newIdea isn't blank
@@ -58,9 +77,8 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
           idea: $scope.newIdea
         }));
 
-        // success
+        // if success response from server
         ideaSaveQuery.$promise.then(function(data){
-          console.dir(data);
           if(data.alreadyExists){
             // push updated count to client
             angular.forEach($scope.ideas, function (idea, key) {
@@ -68,8 +86,10 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
                 $scope.ideas[key].count = data.idea.count;
               }
             });
+            $scope.setFontSize();
           } else {
             $scope.ideas.push(data.idea);
+            $scope.setFontSize();
           }
           alertify.success(data.message);
         // fail
@@ -81,7 +101,7 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
       angular.element('#newIdea').focus();
     };
     
-    //vote
+    //vote through cloud menu click
     $scope.vote = function(id, voteDirection) {
       //send data to api
       var ideaVoteQuery = Ideas.vote({id: id, voteDirection: voteDirection});
@@ -93,6 +113,7 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
             $scope.ideas[key].count = data.idea.count;
           }
         });
+        $scope.setFontSize();
         alertify.success(data.message);
       //fail
       }).catch(function(data){

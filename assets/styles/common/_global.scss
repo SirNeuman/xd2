@@ -53,7 +53,7 @@ article.format-quote {
   margin-bottom: 0;
 }
 .category-quotes .page-header {
-  margin-bottom: 45px;
+  margin-bottom: 36px;
 }
 
 // curvy borders
@@ -118,7 +118,7 @@ article.format-quote {
   font-size: 18px;
 }
 
-a[ng-click]{
+a[ng-click],span[ng-click] {
     cursor: pointer;
 }
 
@@ -155,6 +155,40 @@ a[ng-click]{
     }
   }
 }
+#idea-cloud {
+  font-family: $font-family-brand;
+  
+  ul {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    li{
+      display: inline;
+      a {
+        line-height: 1.4em;
+        vertical-align: middle;
+        margin: 0 .25em;
+      }
+      :hover {text-decoration:none}
+    }
+  }
+  #newIdea {
+    font-size: 32px;
+    padding: 8px;
+    width: 80%;
+    float: left;
+    margin-right: 1em;
+    border-width: 0px 0px 7px 0px;
+    -moz-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
+    -webkit-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
+    -o-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
+    border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
+    color: #555;
+    line-height: 1.45;
+  }
+   #newIdea:focus {outline:0;}
+}
+
 .idea, .vote-menu {
   // preventing double click selection:
   -khtml-user-select: none;
@@ -164,8 +198,15 @@ a[ng-click]{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
 }
-
-
+.btn.btn-xd {
+  background: none;
+  font-family: $font-family-brand;
+  color: #21409A;
+  border: 0;
+}
+.btn.btn-xd.btn-xl {
+  font-size: 36px;
+}
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
 
