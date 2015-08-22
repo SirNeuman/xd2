@@ -29,33 +29,6 @@ h2.entry-title {
   margin-bottom:0;
 }
 
-
-article.format-quote {
-  margin-bottom: 100px;
-  h2 {
-    color: #444;
-    margin-top: 21px;
-    margin-bottom: 0;
-    line-height: 42px;
-  }
-  cite {
-    font-size: 18px;
-    margin-left: 4px;
-    position:relative;
-    top: -22px;
-  }
-  .entry-meta {
-    position:relative;
-    top: -20px;
-  }
-}
-.single-post article.format-quote {
-  margin-bottom: 0;
-}
-.category-quotes .page-header {
-  margin-bottom: 45px;
-}
-
 // curvy borders
 .main.curvy-border, .sidebar-primary .main.curvy-border { 
   padding-left:0;
@@ -82,7 +55,6 @@ article.format-quote {
   border:0;
   margin-bottom: 0;
   padding-bottom: 0;
-  margin-top: 15px;
 }
 
 // global layout
