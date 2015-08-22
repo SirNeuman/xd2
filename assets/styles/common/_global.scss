@@ -159,7 +159,7 @@ a[ng-click],span[ng-click] {
   font-family: $font-family-brand;
   word-wrap: break-word;
   form {
-    margin-top: 30px;
+    margin-top: 54px;
   }
   ul {
     display: none;
@@ -180,9 +180,8 @@ a[ng-click],span[ng-click] {
     font-size: 32px;
     padding: 8px;
     text-indent: 8px;
-    width: 75%;
+    width: calc(100% - 100px);
     float: left;
-    margin-right: 1em;
     border-width: 0px 0px 7px 0px;
     -moz-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
     -webkit-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
@@ -206,6 +205,10 @@ a[ng-click],span[ng-click] {
 }
 #idea-cloud.fullscreen {
   text-align:justify;
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
 };
 .fullscreen {
   position: fixed; width: vw; height:vh; top: 0; right: 0; bottom: 0; left: 0;
