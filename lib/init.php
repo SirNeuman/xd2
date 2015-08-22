@@ -56,7 +56,7 @@ function widgets_init() {
 
   register_sidebar([
     'name'          => __('Idea Cloud', 'sage'),
-    'id'            => 'sidebar-primary',
+    'id'            => 'sidebar-idea-cloud',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
