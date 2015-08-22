@@ -8,8 +8,9 @@
   <div class="idea-cloud" id="idea-cloud" ng-class="{fullscreen: isFullScreen}" ng-controller="IdeaCloudController">
     <?php get_template_part('templates/page', 'header'); ?>
     <p class="intro">How do you recommend celebrating existence?</p>
-    <a href="#" ng-click="isFullScreen = !isFullScreen" 
-      class="full-screen-toggle"><span class="glyphicon glyphicon-fullscreen"></span></a>
+    <a href="#" ng-mousedown="isFullScreen = !isFullScreen" class="full-screen-toggle">
+      <span class="glyphicon glyphicon-fullscreen"></span>
+    </a>
     <form class="form-inline" ng-submit="addIdea()" novalidate>
       <div class="row">
         <div class="col-sm-12">
