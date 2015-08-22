@@ -209,6 +209,9 @@ a[ng-click],span[ng-click] {
      z-index: 12;
   }
 }
+blockquote {
+  font-size: inherit;
+}
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
 
