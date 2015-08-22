@@ -157,7 +157,7 @@ a[ng-click],span[ng-click] {
 }
 #idea-cloud {
   font-family: $font-family-brand;
-  
+  word-wrap: break-word;
   ul {
     display: none;
     list-style: none;
@@ -175,7 +175,8 @@ a[ng-click],span[ng-click] {
   #newIdea {
     font-size: 32px;
     padding: 8px;
-    width: 80%;
+    text-indent: 8px;
+    width: 75%;
     float: left;
     margin-right: 1em;
     border-width: 0px 0px 7px 0px;
@@ -197,28 +198,29 @@ a[ng-click],span[ng-click] {
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  z-index: 9999!important;
 }
-.btn.btn-xd {
-  background: none;
-  font-family: $font-family-brand;
-  color: #21409A;
-  border: 0;
-}
-.btn.btn-xd.btn-xl {
-  font-size: 36px;
+.fullscreen {
+  position: fixed; width: vw; height:vh; top: 0; right: 0; bottom: 0; left: 0;
+  overflow-y: scroll;
+  background-color:white;
+  z-index: 11;
+  .idea {
+     z-index: 12;
+  }
 }
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
 
 }
 @media (min-width: $screen-sm-min) { 
-
+  .fullscreen { padding:3em; }
 }
 @media (max-width: $screen-sm-max) { 
 
 }
 @media (min-width: $screen-md-min) { 
-
+  .fullscreen { padding:3em; }
 }
 @media (max-width: $screen-md-max) { 
 
