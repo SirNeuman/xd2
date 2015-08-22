@@ -227,13 +227,13 @@ blockquote {
 
 }
 @media (min-width: $screen-sm-min) { 
-  .fullscreen { padding:3em; }
+  .fullscreen { padding: 0 3em 3em 3em; }
 }
 @media (max-width: $screen-sm-max) { 
 
 }
 @media (min-width: $screen-md-min) { 
-  .fullscreen { padding:3em; }
+  .fullscreen { padding: 0 3em 3em 3em; }
 }
 @media (max-width: $screen-md-max) { 
 
