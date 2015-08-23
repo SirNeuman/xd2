@@ -1,4 +1,7 @@
-var ideaCloud = angular.module('ideaCloud', ['ngResource']);
+var ideaCloud = angular.module('ideaCloud', [
+  'ngAnimate',
+  'ngResource'
+  ]);
 
   // Setup API as resource
   ideaCloud.factory('Ideas', function($resource) {
