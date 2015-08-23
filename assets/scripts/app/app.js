@@ -29,6 +29,8 @@ var ideaCloud = angular.module('ideaCloud', [
 
 
   ideaCloud.controller('IdeaCloudController', function($scope, Ideas, $compile) {
+    //set loading variable
+    $scope.loading = true;
 
     // make ideas list available to view
     var getIdeasQuery = Ideas.query(function(data) {
@@ -36,8 +38,10 @@ var ideaCloud = angular.module('ideaCloud', [
     });
     getIdeasQuery.$promise.then(function(data){
       // Default font sizes
+      $scope.loading = false;
       $scope.ideas = data;
       $scope.setFontSize();
+      
       angular.element('#idea-cloud ul').show();
     }).catch(function(){
       // uh oh
@@ -70,8 +74,8 @@ var ideaCloud = angular.module('ideaCloud', [
       //add menu with params
       angular.element('body').append($compile(
       '<div class="vote-menu" style="top:' + y + 'px; left:' + x + 'px;"><ul>' +
-      '<li><a ng-click="vote(' + id + ', \'up\')" data-vote="up" class="vote up">Up</a></li>' + 
-      '<li><a ng-click="vote(' + id + ', \'down\')" data-vote="down" class="vote down">Down</a></li>' + 
+      '<li><a ng-click="vote(' + id + ', \'up\')"  class="vote up hover">Up</a></li>' + 
+      '<li><a ng-click="vote(' + id + ', \'down\')" class="vote down">Down</a></li>' + 
       '</ul></div>')($scope));
     };
 
@@ -91,10 +95,12 @@ var ideaCloud = angular.module('ideaCloud', [
             angular.forEach($scope.ideas, function (idea, key) {
               if(idea.id === data.idea.id){
                 $scope.ideas[key].count = data.idea.count;
+                $scope.ideas[key].wasTickled = true;
               }
             });
             $scope.setFontSize();
           } else {
+            data.idea.wasTickled = true;
             $scope.ideas.push(data.idea);
             $scope.setFontSize();
           }
@@ -118,6 +124,7 @@ var ideaCloud = angular.module('ideaCloud', [
         angular.forEach($scope.ideas, function (idea, key) {
           if(idea.id === data.idea.id){
             $scope.ideas[key].count = data.idea.count;
+            $scope.ideas[key].wasTickled = true;
           }
         });
         $scope.setFontSize();

@@ -157,6 +157,7 @@ a[ng-click],span[ng-click] {
 #idea-cloud {
   font-family: $font-family-brand;
   word-wrap: break-word;
+  min-height: 600px;
   form {
     margin-top: 54px;
   }
@@ -165,14 +166,20 @@ a[ng-click],span[ng-click] {
     list-style: none;
     padding-left: 0;
     margin-top: 43px;
-    li{
+    li {
       display: inline;
       a {
         line-height: 1.3em;
         vertical-align: middle;
         margin: 0 3px;
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.15s;
+        &:hover { text-decoration:none }
       }
-      :hover {text-decoration:none}
+
+     
+    }
+    li.tickled a {
+      color: $brand-green;
     }
   }
   #newIdea {
@@ -208,7 +215,7 @@ a[ng-click],span[ng-click] {
     width: 90%;
     margin: 0 auto;
   }
-};
+}
 .fullscreen {
   position: fixed; width: vw; height:vh; top: 0; right: 0; bottom: 0; left: 0;
   overflow-y: scroll;
@@ -250,7 +257,7 @@ blockquote {
         margin-right: 5px;
         background-position: 0 0;
       }
-      a.vote.up:hover {
+      a.vote.up:hover, a.vote.up.hover, {
         background-position: 0 -87px;
       }
       a.vote.down {
@@ -262,24 +269,35 @@ blockquote {
     }
   }
 }
+// spinner
+.xd-spinner {
+  position:absolute;
+  width: 96%;
+  height: 400px;
+  background: url(#{$asset-path}/images/XD64.png) 50% 50% no-repeat;
+  -webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to   {-webkit-transform: rotate(359deg);}
+}
 
 // animations 
 .ng-enter {
-  transition: 0.5s;
+  transition: 0.65s;
   opacity: 0;
 }
 .ng-enter-active {
   opacity: 1;
 }
 .ng-leave {
-  transition: 0.25s;
+  transition: 0.5s;
   opacity: 1;
 
 }
 .ng-leave-active {
   opacity: 0;
 }
-
 
 @media (min-width: $screen-md-min) { 
   #idea-cloud.fullscreen form {
