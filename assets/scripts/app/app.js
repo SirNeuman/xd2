@@ -63,6 +63,10 @@ var ideaCloud = angular.module('ideaCloud', [
       //set mouse click coords
       var x = event.pageX - 15, // offset for little tree guy
           y = event.pageY - 29;
+      if(event.shiftKey){
+         //logic
+          x = event.pageX - 49;
+      }
       //add menu with params
       angular.element('body').append($compile(
       '<div class="vote-menu" style="top:' + y + 'px; left:' + x + 'px;"><ul>' +
