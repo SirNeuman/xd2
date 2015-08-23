@@ -205,7 +205,7 @@ a[ng-click],span[ng-click] {
 #idea-cloud.fullscreen {
   text-align:justify;
   form {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
   }
 };
@@ -214,6 +214,7 @@ a[ng-click],span[ng-click] {
   overflow-y: scroll;
   background-color:white;
   z-index: 11;
+  padding: 0 3em 3em 3em;
   .idea {
      z-index: 12;
   }
@@ -223,20 +224,54 @@ blockquote {
 }
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
-
+  .full-screen-toggle {
+    display: none;
+  }
 }
 @media (min-width: $screen-sm-min) { 
-  .fullscreen { padding: 0 3em 3em 3em; }
 }
 @media (max-width: $screen-sm-max) { 
+  .vote-menu {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -12px;
+    ul li {
+      a.vote {
+        display: block;
+        float: left;
+        clear: none;
+        width: 61px;
+        height: 87px;
+        background:transparent url(#{$asset-path}/images/vote-sprite-x2.png) top left no-repeat;
+        text-indent: -9999px;  
+        background-size:200%;
+      }
+      a.vote.up {
+        margin-right: 5px;
+        background-position: 0 0;
+      }
+      a.vote.up:hover {
+        background-position: 0 -87px;
+      }
+      a.vote.down {
+        background-position: -61px 0;
+      }
+      a.vote.down:hover {
+        background-position: -61px -87px;
+      }
+    }
+  }
 
 }
 @media (min-width: $screen-md-min) { 
-  .fullscreen { padding: 0 3em 3em 3em; }
+  #idea-cloud.fullscreen form {
+    width: 75%;
+  } 
 }
-@media (max-width: $screen-md-max) { 
-
+@media (max-width: $screen-md-max) {
 }
 @media (min-width: $screen-lg-min) { 
-
+  #idea-cloud.fullscreen form {
+    width: 50%;
+  }
 }
