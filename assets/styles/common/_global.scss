@@ -157,17 +157,21 @@ a[ng-click],span[ng-click] {
 }
 #idea-cloud {
   font-family: $font-family-brand;
-  
+  word-wrap: break-word;
+  form {
+    margin-top: 54px;
+  }
   ul {
     display: none;
     list-style: none;
     padding-left: 0;
+    margin-top: 43px;
     li{
       display: inline;
       a {
-        line-height: 1.4em;
+        line-height: 1.3em;
         vertical-align: middle;
-        margin: 0 .25em;
+        margin: 0 3px;
       }
       :hover {text-decoration:none}
     }
@@ -175,9 +179,9 @@ a[ng-click],span[ng-click] {
   #newIdea {
     font-size: 32px;
     padding: 8px;
-    width: 80%;
+    text-indent: 8px;
+    width: calc(100% - 100px);
     float: left;
-    margin-right: 1em;
     border-width: 0px 0px 7px 0px;
     -moz-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
     -webkit-border-image: url(#{$asset-path}/images/division-horizontal.png) 0 0 7 0 stretch;
@@ -197,28 +201,39 @@ a[ng-click],span[ng-click] {
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  z-index: 9999!important;
 }
-.btn.btn-xd {
-  background: none;
-  font-family: $font-family-brand;
-  color: #21409A;
-  border: 0;
+#idea-cloud.fullscreen {
+  text-align:justify;
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+};
+.fullscreen {
+  position: fixed; width: vw; height:vh; top: 0; right: 0; bottom: 0; left: 0;
+  overflow-y: scroll;
+  background-color:white;
+  z-index: 11;
+  .idea {
+     z-index: 12;
+  }
 }
-.btn.btn-xd.btn-xl {
-  font-size: 36px;
+blockquote {
+  font-size: inherit;
 }
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
 
 }
 @media (min-width: $screen-sm-min) { 
-
+  .fullscreen { padding: 0 3em 3em 3em; }
 }
 @media (max-width: $screen-sm-max) { 
 
 }
 @media (min-width: $screen-md-min) { 
-
+  .fullscreen { padding: 0 3em 3em 3em; }
 }
 @media (max-width: $screen-md-max) { 
 

@@ -1,5 +1,5 @@
       <!-- if in quote category, display title as excerpt -->
-      <?php if(in_category('5')){ ?>
+      <?php if(has_post_format('quote')){ ?>
         <article <?php post_class(); ?>>
             <header>
                 <h2 class="quote"><?php the_content(''); ?></h2>

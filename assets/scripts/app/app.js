@@ -41,8 +41,8 @@ var ideaCloud = angular.module('ideaCloud', ['ngResource']);
     });
 
     $scope.setFontSize = function() {
-      var minFontsize = 18; 
-      var maxFontsize = 84;
+      var minFontsize = 14; 
+      var maxFontsize = 72;
       var countArray = [];
       angular.forEach($scope.ideas, function (idea) {
         countArray.push(idea.count);
