@@ -8,7 +8,8 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "bootstrap-sass-official": "3.3.5"
+    "bootstrap-sass-official": "3.3.5",
+    "alertify.js": "~0.3.11"
   },
   "overrides": {
     "modernizr": {
@@ -34,6 +35,13 @@
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "./assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "alertify.js": {
+      "main": [
+        "./themes/alertify.core.css",
+        "./themes/alertify.default.css",
+        "./lib/alertify.min.js"
       ]
     }
   }

@@ -22,7 +22,11 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
-    }
+    },
+    "app.js": {
+      "files": ["scripts/app/app.js"],
+      "main": true
+    }  
   },
   "config": {
     "devUrl": "http://localhost:8888/"

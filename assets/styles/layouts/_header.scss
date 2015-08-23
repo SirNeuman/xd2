@@ -43,11 +43,11 @@ header {
 }  
 
 //different colors for each nav item on hover:
-.nav li.menu-item-198 a:hover,.nav li.menu-item-198 a:active { color:#ED1C24 }
-.nav li.menu-item-199 a:hover,.nav li.menu-item-199 a:active { color:#F26522 }
-.nav li.menu-item-200 a:hover,.nav li.menu-item-200 a:active { color:#FFDE17 }
-.nav li.menu-item-201 a:hover,.nav li.menu-item-201 a:active { color:#00A14B }
-.nav li.menu-item-203 a:hover,.nav li.menu-item-203 a:active { color:#21409A }
+.nav li.menu-item-188 a:hover,.nav li.menu-item-188 a:active { color:#ED1C24 }
+.nav li.menu-item-198 a:hover,.nav li.menu-item-198 a:active,.nav li.menu-item-198.current-menu-item a { color:#F26522 }
+.nav li.menu-item-199 a:hover,.nav li.menu-item-199 a:active,.nav li.menu-item-199.current-menu-item a { color:#FFDE17 }
+.nav li.menu-item-200 a:hover,.nav li.menu-item-200 a:active,.nav li.menu-item-200.current-menu-item a { color:#00A14B }
+.nav li.menu-item-201 a:hover,.nav li.menu-item-201 a:active,.nav li.menu-item-201.current-menu-item a { color:#21409A }
 
 
 .happyTree {
@@ -153,7 +153,6 @@ header {
     margin-bottom: 10px;
     margin-top: 0;
     a {
-      color: white;
       font-size: 28px;
 
     }

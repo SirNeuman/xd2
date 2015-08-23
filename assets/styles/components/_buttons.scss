@@ -80,3 +80,30 @@
   top: 28px;
   left: 5px;
 }
+.btn.btn-xd {
+  background: none;
+  font-family: $font-family-brand;
+  color: $brand-green;
+  border: 0;
+}
+.btn-xd:focus, .btn-xd:active {
+  outline: 0;
+  text-decoration: underline;
+}
+
+.btn.btn-xd.btn-xl {
+  font-size: 36px;
+}
+.full-screen-toggle {
+    color: #CECECE;
+    position: absolute;
+    top: 28px;
+    font-size: 45px;
+    right: 30px;
+    &:hover {
+      color: $brand-primary;
+    }
+    &:focus {
+      color: #CECECE;
+    }
+}

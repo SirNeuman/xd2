@@ -10,6 +10,9 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+// set app plugin defaults
+alertify.set({ delay: 2000 });
+
 (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
@@ -28,7 +31,7 @@
       }
     },
     // Home page
-    'home': {
+    'hohttps://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CB8QFjAAahUKEwj_kZ6wirjHAhXGVj4KHSGuD8o&url=https%3A%2F%2Fapi.jquery.com%2Fremove%2F&ei=SwDWVb_APMat-QGh3L7QDA&usg=AFQjCNE1X4ioemn4GPlU2YgyXGAAcqSiWQ&sig2=TDrUSzy1a55iqIH9ek28CAme': {
       init: function() {
         // JavaScript to be fired on the home page
       },
@@ -36,10 +39,16 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
+    // Idea cloud page, note the change from idea-cloud to idea_cloud
+    'idea_cloud': {
       init: function() {
-        // JavaScript to be fired on the about us page
+        // //hide menu on outside click
+        $(document).on('mouseup',function (event) {
+          var container = $('.vote-menu');
+          if (!container.is(event.target) && container.has(event.target).length === 0) {
+            container.fadeOut(199).delay(199).remove();
+          }
+        });
       }
     }
   };
