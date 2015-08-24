@@ -269,6 +269,17 @@ blockquote {
     }
   }
 }
+#doorbell-button { 
+  background-color:#72CBE9;
+  border: 3px solid #fff;
+  border-bottom-width:0px;
+  padding:8px inherit;
+  font-family: $font-family-brand;
+  font-size:18px;
+}
+
+
+
 // spinner
 .xd-spinner {
   position:absolute;
