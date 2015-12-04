@@ -12,7 +12,7 @@
       <span class="glyphicon glyphicon-fullscreen"></span>
     </a>
     <form class="form-inline" ng-submit="addIdea()" novalidate>
-      <div class="row">
+      <div class="row new-idea">
         <div class="col-sm-12">
           <label class="sr-only" for="newIdea">Idea</label>
             <input type="text" ng-model="newIdea" name="newIdea" id="newIdea" placeholder="your idea" autofocus />

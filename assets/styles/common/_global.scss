@@ -231,6 +231,10 @@ blockquote {
 }
 // Breakpoints
 @media (max-width: $screen-xs-max) { 
+  .row.new-idea .col-sm-12 {
+      padding-left:0px;
+      padding-right:0px;
+  }
   .full-screen-toggle {
     display: none;
   }
@@ -267,6 +271,16 @@ blockquote {
         background-position: -61px -87px;
       }
     }
+  }
+  // fix for mobile doorbell button
+  footer.content-info {
+    padding-bottom: 2px;
+  }
+
+  #doorbell-button {
+    position:relative;
+    float: right;
+    margin-top: -40px;
   }
 }
 #doorbell-button { 
