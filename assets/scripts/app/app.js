@@ -5,13 +5,13 @@ var ideaCloud = angular.module('ideaCloud', [
 
   // Setup API as resource
   ideaCloud.factory('Ideas', function($resource) {
-    var data = $resource('http://104.131.8.61/api/v1/ideas', {
-      id: '@id', 
+    var data = $resource('http://xd2.ntobo.com/api/v1/ideas', {
+      id: '@id',
       voteDirection: '@voteDirection'
       }, {
       'query':  {
-        url: 'http://104.131.8.61/api/v1/ideas/:id/',
-        method:'GET', 
+        url: 'http://xd2.ntobo.com/api/v1/ideas/:id/',
+        method:'GET',
         isArray:true
       },
       'save':   {
@@ -21,12 +21,11 @@ var ideaCloud = angular.module('ideaCloud', [
       },
       'vote': {
         method:'PUT',
-        url: 'http://104.131.8.61/api/v1/ideas/:id/:voteDirection'      
+        url: 'http://xd2.ntobo.com/api/v1/ideas/:id/:voteDirection'
       }
     });
     return data;
   });
-
 
   ideaCloud.controller('IdeaCloudController', function($scope, Ideas, $compile) {
     //set loading variable
@@ -41,14 +40,13 @@ var ideaCloud = angular.module('ideaCloud', [
       $scope.loading = false;
       $scope.ideas = data;
       $scope.setFontSize();
-      
       angular.element('#idea-cloud ul').show();
     }).catch(function(){
       // uh oh
     });
 
     $scope.setFontSize = function() {
-      var minFontsize = 14; 
+      var minFontsize = 14;
       var maxFontsize = 72;
       var countArray = [];
       angular.forEach($scope.ideas, function (idea) {

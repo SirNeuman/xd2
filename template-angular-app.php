@@ -27,6 +27,6 @@
         </a>
       </li>
     </ul>
-    <div class="xd-spinner" ng-if="loading"></div>
+    <div class="xd-spinner" ng-hide="true" ng-if="loading"></div>
   </div>
 <?php endwhile; ?>
