@@ -47,7 +47,7 @@ var ideaCloud = angular.module('ideaCloud', [
 
     $scope.setFontSize = function() {
       var minFontsize = 17;
-      var maxFontsize = 72;
+      var maxFontsize = 82;
       var countArray = [];
       angular.forEach($scope.ideas, function (idea) {
         countArray.push(idea.count);
@@ -88,6 +88,12 @@ var ideaCloud = angular.module('ideaCloud', [
 
         // if success response from server
         ideaSaveQuery.$promise.then(function(data){
+
+          //if idea gets flagged by filters
+          if (data.flagged) {
+             alertify.error(data.message);
+             return;
+          }
           if(data.alreadyExists){
             // push updated count to client
             angular.forEach($scope.ideas, function (idea, key) {
@@ -98,6 +104,7 @@ var ideaCloud = angular.module('ideaCloud', [
             });
             $scope.setFontSize();
           } else {
+            //add new idea to client
             data.idea.wasTickled = true;
             $scope.ideas.push(data.idea);
             $scope.setFontSize();
