@@ -125,6 +125,11 @@ var ideaCloud = angular.module('ideaCloud', [
       var ideaVoteQuery = Ideas.vote({id: id, voteDirection: voteDirection});
       // success
       ideaVoteQuery.$promise.then(function(data){
+        //if idea gets flagged by filters
+        if (data.flagged) {
+           alertify.error(data.message);
+           return;
+        }
         // push result to client
         angular.forEach($scope.ideas, function (idea, key) {
           if(idea.id === data.idea.id){
