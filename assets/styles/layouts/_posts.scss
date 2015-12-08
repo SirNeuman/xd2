@@ -1,3 +1,31 @@
+article.post {
+  margin-top: 70px;
+}
+article.post.format-quote {
+  margin-top: 80px;
+  h2 {
+    color: #444;
+    margin-top: 21px;
+    margin-bottom: 0;
+    line-height: 42px;
+  }
+  cite {
+    font-size: 18px;
+    margin-left: 4px;
+    position:relative;
+    top: -22px;
+  }
+  .entry-meta {
+    position:relative;
+    top: -20px;
+  }
+}
+.single-post article.format-quote {
+  margin-bottom: 0;
+}
+.category-quotes .page-header {
+  margin-bottom: 36px;
+}
 .nav-links {
   font-family: $font-family-brand;
   clear: both;

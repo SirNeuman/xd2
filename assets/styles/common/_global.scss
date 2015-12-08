@@ -30,32 +30,6 @@ h2.entry-title {
   margin-bottom:0;
 }
 
-article.format-quote {
-  margin-bottom: 100px;
-  h2 {
-    color: #444;
-    margin-top: 21px;
-    margin-bottom: 0;
-    line-height: 42px;
-  }
-  cite {
-    font-size: 18px;
-    margin-left: 4px;
-    position:relative;
-    top: -22px;
-  }
-  .entry-meta {
-    position:relative;
-    top: -20px;
-  }
-}
-.single-post article.format-quote {
-  margin-bottom: 0;
-}
-.category-quotes .page-header {
-  margin-bottom: 36px;
-}
-
 // curvy borders
 .main.curvy-border, .sidebar-primary .main.curvy-border { 
   padding-left:0;
@@ -175,7 +149,10 @@ a[ng-click],span[ng-click] {
         vertical-align: middle;
         margin: 0 10px;
         transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.15s;
-        &:hover { text-decoration:underline; }
+        &:hover { 
+          text-decoration:none;
+          color: $brand-green;
+        }
       }
 
     }
