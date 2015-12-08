@@ -220,6 +220,9 @@ blockquote {
   .full-screen-toggle {
     display: none;
   }
+  aside.sidebar {
+    margin-top: 22px;
+  }
 }
 @media (min-width: $screen-sm-min) { 
 }
