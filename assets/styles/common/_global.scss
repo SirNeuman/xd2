@@ -336,3 +336,55 @@ blockquote {
     width: 50%;
   }
 }
+
+// xdicon classes
+@font-face {
+  font-family: 'xdicons';
+  src:url('#{$asset-path}/fonts/xdicons.eot?p4113v');
+  src:url('#{$asset-path}/fonts/xdicons.eot?p4113v#iefix') format('embedded-opentype'),
+    url('#{$asset-path}/fonts/xdicons.ttf?p4113v') format('truetype'),
+    url('#{$asset-path}/fonts/xdicons.woff?p4113v') format('woff'),
+    url('#{$asset-path}/fonts/xdicons.svg?p4113v#xdicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="xdico-"], [class*=" xdico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'xdicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.xdico-chev-r:before {
+  content: "\e907";
+}
+.xdico-chev-l:before {
+  content: "\e908";
+}
+.xdico-fullscreen2:before {
+  content: "\e906";
+}
+.xdico-chev-u:before {
+  content: "\e900";
+}
+.xdico-chev-d:before {
+  content: "\e901";
+}
+.xdico-close:before {
+  content: "\e902";
+}
+.xdico-rarr:before {
+  content: "\e903";
+}
+.xdico-larr:before {
+  content: "\e904";
+}
+.xdico-fullscreen:before {
+  content: "\e905";
+}
+

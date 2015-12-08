@@ -9,7 +9,7 @@
     <?php get_template_part('templates/page', 'header'); ?>
     <p class="intro">How do you recommend celebrating existence? A collaborative idea cloud.</p>
     <a ng-click="isFullScreen = !isFullScreen" class="full-screen-toggle">
-      <span class="glyphicon glyphicon-fullscreen"></span>
+      <span class="xdico-fullscreen2"></span>
     </a>
     <form class="form-inline" ng-submit="addIdea()" novalidate>
       <div class="row new-idea">

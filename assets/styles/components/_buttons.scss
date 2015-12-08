@@ -94,16 +94,24 @@
 .btn.btn-xd.btn-xl {
   font-size: 36px;
 }
-.full-screen-toggle {
+.full-screen-toggle, #idea-cloud ul li a.full-screen-toggle {
     color: #CECECE;
     position: absolute;
-    top: 28px;
-    font-size: 45px;
-    right: 30px;
+    top: 55px;
+    font-size: 48px;
+    right: 12px;
     &:hover {
       color: $brand-primary;
+      text-decoration: none;
     }
     &:focus {
       color: #CECECE;
+    }
+}
+.fullscreen .full-screen-toggle, #idea-cloud.fullscreen ul li a.full-screen-toggle {
+    top: 39px;
+    right: 40px;
+    .xdico-fullscreen2:before {
+      content: "\e902";
     }
 }
