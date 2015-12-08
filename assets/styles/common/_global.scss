@@ -166,17 +166,18 @@ a[ng-click],span[ng-click] {
     list-style: none;
     padding-left: 0;
     margin-top: 43px;
+    font-size:18px;
     li {
       display: inline;
       a {
         line-height: 1.7em;
+        color: #21409A;
         vertical-align: middle;
-        margin: 0 3px;
-        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.15s;
-        &:hover { text-decoration:none }
+        margin: 0 10px;
+        transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.15s;
+        &:hover { text-decoration:underline; }
       }
 
-     
     }
     li.tickled a {
       color: $brand-green;
@@ -211,9 +212,13 @@ a[ng-click],span[ng-click] {
 }
 #idea-cloud.fullscreen {
   text-align:justify;
+  ul li {
+    font-size: 120%;
+  }
   form {
     width: 90%;
     margin: 0 auto;
+    margin-top: 100px;
   }
 }
 .fullscreen {

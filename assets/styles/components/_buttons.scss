@@ -81,14 +81,14 @@
   left: 5px;
 }
 .btn.btn-xd {
-  background: none;
+  background:transparent url(/wp-content/themes/xd2/assets/images/xdbtnbg.svg) 0px 3px no-repeat;
+  background-size: 100% 100%;
   font-family: $font-family-brand;
-  color: $brand-green;
+  color: white;
   border: 0;
 }
 .btn-xd:focus, .btn-xd:active {
   outline: 0;
-  text-decoration: underline;
 }
 
 .btn.btn-xd.btn-xl {
