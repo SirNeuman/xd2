@@ -1,0 +1,12 @@
+.nav-links {
+  font-family: $font-family-brand;
+  clear: both;
+  font-size: 22px;
+  min-height: 28px;
+  a:hover, a:active, a:focus  {
+    text-decoration: none;
+  }
+  .nav-previous {
+    float: right;
+  }
+}
